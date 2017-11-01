@@ -1,0 +1,6 @@
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Abstractions\bin\Debug\IISArt.Abstractions.dll
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Abstractions\bin\Debug\IISArt.Abstractions.pdb
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Abstractions\obj\Debug\IISArt.Abstractions.csproj.CoreCompileInputs.cache
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Abstractions\obj\Debug\IISArt.Abstractions.dll
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Abstractions\obj\Debug\IISArt.Abstractions.pdb
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Abstractions\obj\Debug\IISArt.Abstractions.csprojResolveAssemblyReference.cache

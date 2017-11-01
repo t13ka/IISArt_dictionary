@@ -1,0 +1,8 @@
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Common\bin\Debug\IISArt.Common.dll
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Common\bin\Debug\IISArt.Common.pdb
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Common\bin\Debug\IISArt.Abstractions.dll
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Common\bin\Debug\IISArt.Abstractions.pdb
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Common\obj\Debug\IISArt.Common.csprojResolveAssemblyReference.cache
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Common\obj\Debug\IISArt.Common.csproj.CoreCompileInputs.cache
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Common\obj\Debug\IISArt.Common.dll
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Common\obj\Debug\IISArt.Common.pdb

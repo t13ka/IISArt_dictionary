@@ -1,0 +1,13 @@
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\bin\Debug\IISArt.Client.exe.config
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\bin\Debug\IISArt.Client.exe
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\bin\Debug\IISArt.Client.pdb
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\obj\Debug\IISArt.Client.csprojResolveAssemblyReference.cache
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\obj\Debug\IISArt.Client.csproj.CoreCompileInputs.cache
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\obj\Debug\IISArt.Client.exe
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\obj\Debug\IISArt.Client.pdb
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\bin\Debug\IISArt.Abstractions.dll
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\bin\Debug\IISArt.Common.dll
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\bin\Debug\IISArt.Abstractions.pdb
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\bin\Debug\IISArt.Common.pdb
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\bin\Debug\Ninject.dll
+W:\Projects\t13ka\IISArt\Dictionary\IISArt.Client\bin\Debug\Ninject.xml
