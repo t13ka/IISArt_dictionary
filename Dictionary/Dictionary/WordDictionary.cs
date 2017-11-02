@@ -125,20 +125,6 @@
             return new string[] { };
         }
 
-        private static string[] GetValuesWhichAreInTheSet(string[] values, string[] set)
-        {
-            var list = new List<string>();
-            foreach (var value in values)
-            {
-                if (set.Contains(value))
-                {
-                    list.Add(value);
-                }
-            }
-
-            return list.ToArray();
-        }
-
         private static string[] GetValuesWhichAreNotInTheSet(string[] values, string[] set)
         {
             var list = new List<string>();
