@@ -48,7 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandBuilterTests.cs" />
+    <Compile Include="CommandBuilderTests.cs" />
     <Compile Include="WordDictionaryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
