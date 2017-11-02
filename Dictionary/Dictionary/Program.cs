@@ -19,11 +19,11 @@
 
             var kernel = new StandardKernel();
             kernel.Bind<IWordDictionary>().To<WordDictionary>().InSingletonScope();
-            kernel.Bind<ICommandParser>().To<CommandParser>().InSingletonScope();
+            kernel.Bind<ICommandBuilder>().To<CommandBuilder>().InSingletonScope();
             kernel.Bind<ILogger>().To<Logger>().InSingletonScope();
 
             var wordDictionary = kernel.Get<IWordDictionary>();
-            var commandParser = kernel.Get<ICommandParser>();
+            var commandBuilder = kernel.Get<ICommandBuilder>();
             var logger = kernel.Get<ILogger>();
 
             TcpListener listener = null;
@@ -39,7 +39,7 @@
                 {
                     var client = listener.AcceptTcpClient();
 
-                    var clientObject = new ClientObject(client, wordDictionary, commandParser, logger);
+                    var clientObject = new ClientObject(client, wordDictionary, commandBuilder, logger);
 
                     var action = new Action(clientObject.Process);
 

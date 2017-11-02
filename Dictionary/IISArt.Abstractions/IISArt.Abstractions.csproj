@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICommand.cs" />
-    <Compile Include="ICommandParser.cs" />
+    <Compile Include="ICommandBuilder.cs" />
     <Compile Include="IConnectionInfo.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="IWordDictionary.cs" />

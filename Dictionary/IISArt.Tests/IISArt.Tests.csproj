@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandBuilterTests.cs" />
     <Compile Include="WordDictionaryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,6 +63,10 @@
     <ProjectReference Include="..\IISArt.Abstractions\IISArt.Abstractions.csproj">
       <Project>{66270f1d-550e-4e00-8965-baa6d201e4a0}</Project>
       <Name>IISArt.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IISArt.Common\IISArt.Common.csproj">
+      <Project>{5bbd2056-6929-4306-9c8f-a1b3d77897e5}</Project>
+      <Name>IISArt.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

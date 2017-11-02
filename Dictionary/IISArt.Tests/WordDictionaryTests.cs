@@ -40,6 +40,8 @@ namespace IISArt.Tests
             d.Delete(Key, new[] { "v1" });
             CollectionAssert.DoesNotContain(d.Get(Key).ToList(), "v1");
             Assert.AreEqual(d.Get(Key).ToList().Count, 2);
+
+            d.Delete(Key, new[] { "v4" });
         }
 
         [TestMethod]

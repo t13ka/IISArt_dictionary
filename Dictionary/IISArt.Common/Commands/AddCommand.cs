@@ -21,5 +21,12 @@
             sb.Append($"): values of word \"{Key}\" has been successfully added to dictionary.");
             return sb.ToString();
         }
+
+        public override bool IsValid()
+        {
+            var isBaseValid = base.IsValid();
+            var isValuesValid = Values.Length > 0;
+            return isBaseValid && isValuesValid;
+        }
     }
 }

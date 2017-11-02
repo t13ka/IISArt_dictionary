@@ -17,9 +17,9 @@
         static void Main(string[] args)
         {
             var kernel = new StandardKernel();
-            kernel.Bind<ICommandParser>().To<CommandParser>().InSingletonScope();
-            var commandParser = kernel.Get<ICommandParser>();
-            var command = commandParser.Parse(args);
+            kernel.Bind<ICommandBuilder>().To<CommandBuilder>().InSingletonScope();
+            var commandBuilder = kernel.Get<ICommandBuilder>();
+            var command = commandBuilder.Build(args);
             if (command.IsValid() == false)
             {
                 throw new ArgumentNullException($"Command is invalid");

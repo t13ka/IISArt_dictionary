@@ -7,14 +7,14 @@
 
     using IISArt.Abstractions;
 
-    public class CommandParser : ICommandParser
+    public class CommandBuilder : ICommandBuilder
     {
         /// <summary>
         /// The available commands.
         /// </summary>
         private static readonly Dictionary<string, Type> AvailableCommands;
 
-        static CommandParser()
+        static CommandBuilder()
         {
             AvailableCommands = new Dictionary<string, Type>();
             var assemblies = AppDomain.CurrentDomain.GetAssemblies();
@@ -33,7 +33,7 @@
             }
         }
 
-        public ICommand Parse(string message)
+        public ICommand Build(string message)
         {
             if (string.IsNullOrEmpty(message))
             {
@@ -42,10 +42,10 @@
 
             var args = message.Split(' ');
 
-            return Parse(args);
+            return Build(args);
         }
 
-        public ICommand Parse(string[] args)
+        public ICommand Build(string[] args)
         {
             if (args.Length == 0)
             {

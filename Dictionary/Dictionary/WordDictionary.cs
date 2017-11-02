@@ -63,33 +63,28 @@
         /// The values.
         /// </param>
         /// <returns>
-        /// The <see cref="string[]"/>.
+        /// The <see cref="bool"/>.
         /// </returns>
-        public string[] Delete(string key, string[] values)
+        public Dictionary<string, bool> Delete(string key, string[] values)
         {
+            var result = new Dictionary<string, bool>();
+
             values = PrepareInputSet(values);
-            if (values.Length == 0)
+
+            if (Instance.TryGetValue(key, out string[] delWords))
             {
-                return values;
+                foreach (var value in values)
+                {
+                    result.Add(value, delWords.Contains(value));
+                }
+
+                var newValue = delWords.Except(values).ToArray();
+                if (Instance.TryUpdate(key, newValue, Instance[key]))
+                {
+                }
             }
 
-            if (Instance.ContainsKey(key) == false)
-            {
-                return new string[] { };
-            }
-
-            var output = values;
-            var updateFunc = new Func<string, string[], string[]>(
-                (funcKey, set) =>
-                    {
-                        output = GetValuesWhichAreInTheSet(values, set);
-                        set = set.Except(values).ToArray();
-                        return set;
-                    });
-
-            Instance.AddOrUpdate(key, values, updateFunc);
-
-            return output;
+            return result;
         }
 
         /// <summary>

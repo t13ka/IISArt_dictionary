@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="Commands\AddCommand.cs" />
     <Compile Include="Commands\BaseCommand.cs" />
-    <Compile Include="Commands\CommandParser.cs" />
+    <Compile Include="Commands\CommandBuilder.cs" />
     <Compile Include="Commands\DeleteCommand.cs" />
     <Compile Include="Commands\GetCommand.cs" />
     <Compile Include="ConnectionInfo.cs" />

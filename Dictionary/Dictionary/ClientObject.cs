@@ -13,7 +13,7 @@ namespace IISArt.Server
 
         private readonly IWordDictionary _wordDictionary;
 
-        private readonly ICommandParser _commandParser;
+        private readonly ICommandBuilder _commandBuilder;
 
         private readonly ILogger _logger;
 
@@ -28,8 +28,8 @@ namespace IISArt.Server
         /// <param name="wordDictionary">
         /// The word dictionary.
         /// </param>
-        /// <param name="commandParser">
-        /// The command parser.
+        /// <param name="commandBuilder">
+        /// The command builder.
         /// </param>
         /// <param name="logger">
         /// The logger.
@@ -37,12 +37,12 @@ namespace IISArt.Server
         public ClientObject(
             TcpClient tcpTcpClient,
             IWordDictionary wordDictionary,
-            ICommandParser commandParser,
+            ICommandBuilder commandBuilder,
             ILogger logger)
         {
             _tcpClient = tcpTcpClient;
             _wordDictionary = wordDictionary;
-            _commandParser = commandParser;
+            _commandBuilder = commandBuilder;
             _logger = logger;
         }
 
@@ -74,7 +74,7 @@ namespace IISArt.Server
                         continue;
                     }
 
-                    var cmd = _commandParser.Parse(message);
+                    var cmd = _commandBuilder.Build(message);
                     if (cmd != null)
                     {
                         if (cmd.IsValid())
@@ -94,12 +94,19 @@ namespace IISArt.Server
                         }
                         else
                         {
-                            _logger.Log($"Command \"{cmd.GetType().Name}\" is invalid!");
+                            var debugMessage = $"Command \"{cmd.GetType().Name}\" is invalid!";
+                            _logger.Log(debugMessage);
+
+                            data = Encoding.Unicode.GetBytes(debugMessage);
+                            stream.Write(data, 0, data.Length);
                         }
                     }
                     else
                     {
-                        _logger.Log($"Can't parse command by presented args");
+                        var debugMessage = $"Can't parse command by presented args";
+                        _logger.Log(debugMessage);
+                        data = Encoding.Unicode.GetBytes(debugMessage);
+                        stream.Write(data, 0, data.Length);
                     }
                 }
             }
