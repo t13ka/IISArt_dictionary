@@ -18,8 +18,8 @@
         {
             AvailableCommands = new Dictionary<string, ICommand>();
             var assemblies = AppDomain.CurrentDomain.GetAssemblies();
-            var assambly = assemblies.First(t => t.FullName.Contains("IISArt.Common"));
-            var types = assambly.GetTypes();
+            var assembly = assemblies.First(t => t.FullName.Contains("IISArt.Common"));
+            var types = assembly.GetTypes();
             var baseCommandTypeName = typeof(BaseCommand).Name;
 
             foreach (var t in types.Where(t => t.BaseType != null && t.BaseType.Name == baseCommandTypeName))
