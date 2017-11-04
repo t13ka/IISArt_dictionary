@@ -7,6 +7,11 @@
 
     public class AddCommand : BaseCommand
     {
+        public AddCommand()
+            : base()
+        {
+        }
+
         public AddCommand(string[] args)
             : base(args)
         {

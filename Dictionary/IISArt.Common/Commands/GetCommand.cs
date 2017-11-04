@@ -7,6 +7,11 @@
 
     public class GetCommand : BaseCommand
     {
+        public GetCommand()
+            : base()
+        {
+        }
+
         public GetCommand(string[] args)
             : base(args)
         {

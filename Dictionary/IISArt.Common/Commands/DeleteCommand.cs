@@ -7,6 +7,11 @@
 
     public class DeleteCommand : BaseCommand
     {
+        public DeleteCommand()
+            : base()
+        {
+        }
+
         public DeleteCommand(string[] args)
             : base(args)
         {

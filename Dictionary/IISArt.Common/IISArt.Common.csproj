@@ -45,6 +45,7 @@
     <Compile Include="Commands\CommandBuilder.cs" />
     <Compile Include="Commands\DeleteCommand.cs" />
     <Compile Include="Commands\GetCommand.cs" />
+    <Compile Include="Commands\OptimizedCommandBuilder.cs" />
     <Compile Include="ConnectionInfo.cs" />
     <Compile Include="ConnectionUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

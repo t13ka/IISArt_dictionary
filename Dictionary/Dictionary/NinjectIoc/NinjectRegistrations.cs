@@ -11,7 +11,7 @@
         public override void Load()
         {
             Bind<IWordDictionary>().To<RegularWordDictionary>().InSingletonScope();
-            Bind<ICommandBuilder>().To<CommandBuilder>().InSingletonScope();
+            Bind<ICommandBuilder>().To<OptimizedCommandBuilder>().InSingletonScope();
             Bind<ILogger>().To<Logger>().InSingletonScope();
         }
     }
