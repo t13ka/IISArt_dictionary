@@ -1,4 +1,4 @@
-﻿namespace IISArt.Server
+﻿namespace IISArt.Server.DictionaryImplementations
 {
     using System;
     using System.Collections.Concurrent;
@@ -7,14 +7,14 @@
 
     using IISArt.Abstractions;
 
-    public class WordDictionary : IWordDictionary
+    public class ConcurrentWordDictionary : IWordDictionary
     {
         private static readonly ConcurrentDictionary<string, string[]> Instance;
 
         /// <summary>
-        /// Initializes static members of the <see cref="WordDictionary"/> class.
+        /// Initializes static members of the <see cref="ConcurrentWordDictionary"/> class.
         /// </summary>
-        static WordDictionary()
+        static ConcurrentWordDictionary()
         {
             Instance = new ConcurrentDictionary<string, string[]>();
         }
@@ -88,25 +88,6 @@
         }
 
         /// <summary>
-        /// Delete key.
-        /// </summary>
-        /// <param name="key">
-        /// The key.
-        /// </param>
-        /// <returns>
-        /// The <see cref="string[]"/>.
-        /// </returns>
-        public string[] DeleteKey(string key)
-        {
-            if (Instance.TryRemove(key, out string[] set))
-            {
-                return set;
-            }
-
-            return new string[] { };
-        }
-
-        /// <summary>
         /// Get values by key.
         /// </summary>
         /// <param name="key">
@@ -141,7 +122,7 @@
 
         private static string[] PrepareInputSet(string[] values)
         {
-            return values.Where(t => t != string.Empty).Distinct().ToArray();
+            return values.Distinct().ToArray();
         }
     }
 }

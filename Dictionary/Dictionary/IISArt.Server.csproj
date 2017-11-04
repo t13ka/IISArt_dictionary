@@ -46,8 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientObject.cs" />
+    <Compile Include="DictionaryImplementations\RegularWordDictionary.cs" />
     <Compile Include="Logger.cs" />
-    <Compile Include="WordDictionary.cs" />
+    <Compile Include="DictionaryImplementations\ConcurrentWordDictionary.cs" />
+    <Compile Include="NinjectIoc\NinjectRegistrations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

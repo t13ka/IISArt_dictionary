@@ -1,13 +1,12 @@
 ﻿namespace IISArt.Server
 {
     using System;
-    using System.Net;
     using System.Net.Sockets;
     using System.Threading;
 
     using IISArt.Abstractions;
     using IISArt.Common;
-    using IISArt.Common.Commands;
+    using IISArt.Server.NinjectIoc;
 
     using Ninject;
 
@@ -17,11 +16,8 @@
         {
             Console.WriteLine($"Dictionary server starting...");
 
-            var kernel = new StandardKernel();
-            kernel.Bind<IWordDictionary>().To<WordDictionary>().InSingletonScope();
-            kernel.Bind<ICommandBuilder>().To<CommandBuilder>().InSingletonScope();
-            kernel.Bind<ILogger>().To<Logger>().InSingletonScope();
-
+            var registrations = new NinjectRegistrations();
+            var kernel = new StandardKernel(registrations);
             var wordDictionary = kernel.Get<IWordDictionary>();
             var commandBuilder = kernel.Get<ICommandBuilder>();
             var logger = kernel.Get<ILogger>();

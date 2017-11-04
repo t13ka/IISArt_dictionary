@@ -1,63 +1,76 @@
-﻿using System;
-
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace IISArt.Tests
 {
+    using System.Collections.Concurrent;
+    using System.Collections.Generic;
     using System.Linq;
 
-    using IISArt.Server;
+    using IISArt.Abstractions;
+    using IISArt.Server.NinjectIoc;
+
+    using Ninject;
 
     [TestClass]
     public class WordDictionaryTests
     {
         private const string Key = "test";
 
+        private readonly StandardKernel _kernel;
+
+        private IWordDictionary _dictionary;
+
+        public WordDictionaryTests()
+        {
+            var registrations = new NinjectRegistrations();
+            _kernel = new StandardKernel(registrations);
+        }
+
         [TestMethod]
         public void AddMethodTests()
         {
-            var d = new WordDictionary();
-            d.Add(Key, new[] { "v1" });
-            CollectionAssert.Contains(d.Get(Key).ToList(), "v1");
+            _dictionary = _kernel.Get<IWordDictionary>();
 
-            d.Add(Key, new[] { "v2" });
-            CollectionAssert.Contains(d.Get(Key).ToList(), "v2");
+            _dictionary.Add(Key, new[] { "v1" });
+            CollectionAssert.Contains(_dictionary.Get(Key).ToList(), "v1");
 
-            d.Add(Key, new[] { "v2" });
-            Assert.AreEqual(d.Get(Key).ToList().Count, 2);
+            _dictionary.Add(Key, new[] { "v2" });
+            CollectionAssert.Contains(_dictionary.Get(Key).ToList(), "v2");
 
-            CollectionAssert.DoesNotContain(d.Get(Key).ToList(), "v3");
+            _dictionary.Add(Key, new[] { "v2" });
+            Assert.AreEqual(_dictionary.Get(Key).ToList().Count, 2);
 
-            d.Add(Key, new[] { string.Empty });
-            Assert.AreEqual(d.Get(Key).ToList().Count, 2);
+            CollectionAssert.DoesNotContain(_dictionary.Get(Key).ToList(), "v3");
+
+            _dictionary.Add(Key, new[] { string.Empty });
+            Assert.AreEqual(3, _dictionary.Get(Key).ToList().Count);
         }
 
         [TestMethod]
         public void DeleteMethodTests()
         {
-            var d = new WordDictionary();
-            d.Add(Key, new[] { "v1", "v2", "v3" });
-            d.Delete(Key, new[] { "v1" });
-            CollectionAssert.DoesNotContain(d.Get(Key).ToList(), "v1");
-            Assert.AreEqual(d.Get(Key).ToList().Count, 2);
-
-            d.Delete(Key, new[] { "v4" });
+            _dictionary = _kernel.Get<IWordDictionary>();
+            _dictionary.Add(Key, new[] { "v1", "v2", "v3" });
+            _dictionary.Delete(Key, new[] { "v1" });
+            var coll = _dictionary.Get(Key).ToList();
+            CollectionAssert.DoesNotContain(coll, "v1");
         }
 
         [TestMethod]
         public void DeleteNotInListMethodTests()
         {
-            var d = new WordDictionary();
-            d.Delete(Key, new[] { "v1" });
-            CollectionAssert.DoesNotContain(d.Get("v1"), "v1");
+            _dictionary = _kernel.Get<IWordDictionary>();
+            _dictionary.Delete(Key, new[] { "v1" });
+            CollectionAssert.DoesNotContain(_dictionary.Get("v1"), "v1");
         }
 
         [TestMethod]
         public void GetMethodTests()
         {
-            var d = new WordDictionary();
-            d.Add(Key, new[] { "v1", "v2", "v3" });
-            var set = d.Get(Key);
+            _dictionary = _kernel.Get<IWordDictionary>();
+
+            _dictionary.Add(Key, new[] { "v1", "v2", "v3" });
+            var set = _dictionary.Get(Key);
             var collection = set.ToList();
             CollectionAssert.Contains(collection, "v1");
             CollectionAssert.Contains(collection, "v2");

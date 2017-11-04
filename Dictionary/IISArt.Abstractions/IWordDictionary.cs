@@ -8,8 +8,6 @@ namespace IISArt.Abstractions
 
         Dictionary<string, bool> Delete(string key, string[] values);
 
-        string[] DeleteKey(string key);
-
         string[] Get(string key);
     }
 }

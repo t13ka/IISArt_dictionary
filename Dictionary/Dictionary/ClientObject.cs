@@ -79,15 +79,15 @@ namespace IISArt.Server
                     {
                         if (cmd.IsValid())
                         {
-#if DEBUG
-                            _logger.Log($"request: command:{cmd.GetType().Name}, params:{cmd}");
-#endif
+//#if DEBUG
+//                            _logger.Log($"request: command:{cmd.GetType().Name}, params:{cmd}");
+//#endif
 
                             var result = cmd.Execute(_wordDictionary);
 
-#if DEBUG
-                            _logger.Log($"response:{result}");
-#endif
+//#if DEBUG
+//                            _logger.Log($"response:{result}");
+//#endif
 
                             data = Encoding.Unicode.GetBytes(result);
                             stream.Write(data, 0, data.Length);
