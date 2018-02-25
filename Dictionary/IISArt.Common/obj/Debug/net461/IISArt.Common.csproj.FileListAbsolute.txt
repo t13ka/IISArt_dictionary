@@ -1,0 +1,10 @@
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Common\bin\Debug\net461\IISArt.Common.dll
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Common\bin\Debug\net461\IISArt.Common.pdb
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Common\bin\Debug\net461\IISArt.Abstractions.dll
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Common\bin\Debug\net461\IISArt.Abstractions.pdb
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Common\obj\Debug\net461\IISArt.Common.csprojResolveAssemblyReference.cache
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Common\obj\Debug\net461\IISArt.Common.csproj.CoreCompileInputs.cache
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Common\obj\Debug\net461\IISArt.Common.AssemblyInfoInputs.cache
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Common\obj\Debug\net461\IISArt.Common.AssemblyInfo.cs
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Common\obj\Debug\net461\IISArt.Common.dll
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Common\obj\Debug\net461\IISArt.Common.pdb

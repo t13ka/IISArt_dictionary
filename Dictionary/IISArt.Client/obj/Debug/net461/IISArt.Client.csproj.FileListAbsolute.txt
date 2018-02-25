@@ -1,0 +1,14 @@
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\bin\Debug\net461\IISArt.Client.exe.config
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\bin\Debug\net461\IISArt.Client.exe
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\bin\Debug\net461\IISArt.Client.pdb
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\bin\Debug\net461\Ninject.dll
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\bin\Debug\net461\IISArt.Abstractions.dll
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\bin\Debug\net461\IISArt.Common.dll
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\bin\Debug\net461\IISArt.Abstractions.pdb
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\bin\Debug\net461\IISArt.Common.pdb
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\obj\Debug\net461\IISArt.Client.csprojResolveAssemblyReference.cache
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\obj\Debug\net461\IISArt.Client.csproj.CoreCompileInputs.cache
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\obj\Debug\net461\IISArt.Client.AssemblyInfoInputs.cache
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\obj\Debug\net461\IISArt.Client.AssemblyInfo.cs
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\obj\Debug\net461\IISArt.Client.exe
+W:\Projects\t13ka\IISArt_dictionary\Dictionary\IISArt.Client\obj\Debug\net461\IISArt.Client.pdb

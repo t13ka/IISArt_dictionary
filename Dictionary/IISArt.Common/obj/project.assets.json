@@ -1,0 +1,81 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.1": {
+      "IISArt.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "compile": {
+          "bin/placeholder/IISArt.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IISArt.Abstractions.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IISArt.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../IISArt.Abstractions/IISArt.Abstractions.csproj",
+      "msbuildProject": "../IISArt.Abstractions/IISArt.Abstractions.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.1": [
+      "IISArt.Abstractions >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\DNS\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
+    "restore": {
+      "projectUniqueName": "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\IISArt.Common\\IISArt.Common.csproj",
+      "projectName": "IISArt.Common",
+      "projectPath": "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\IISArt.Common\\IISArt.Common.csproj",
+      "packagesPath": "C:\\Users\\DNS\\.nuget\\packages\\",
+      "outputPath": "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\IISArt.Common\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\DNS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net461": {
+          "projectReferences": {
+            "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\IISArt.Abstractions\\IISArt.Abstractions.csproj": {
+              "projectPath": "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\IISArt.Abstractions\\IISArt.Abstractions.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net461": {}
+    }
+  }
+}

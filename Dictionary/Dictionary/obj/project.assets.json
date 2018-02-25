@@ -1,0 +1,133 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.6.1": {
+      "Ninject/3.3.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Ninject.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Ninject.dll": {}
+        }
+      },
+      "IISArt.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "compile": {
+          "bin/placeholder/IISArt.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IISArt.Abstractions.dll": {}
+        }
+      },
+      "IISArt.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.6.1",
+        "dependencies": {
+          "IISArt.Abstractions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/IISArt.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IISArt.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ninject/3.3.4": {
+      "sha512": "CmbWW97FfJuh4LEOVZM/spqXl4KAulRUjqeMwRd5J9rDMQArmIYaDMU3pyzXXHT062tbF0OPIMwI7tSOtprPfg==",
+      "type": "package",
+      "path": "ninject/3.3.4",
+      "files": [
+        "lib/net45/Ninject.dll",
+        "lib/net45/Ninject.xml",
+        "lib/netstandard2.0/Ninject.dll",
+        "lib/netstandard2.0/Ninject.xml",
+        "ninject.3.3.4.nupkg.sha512",
+        "ninject.nuspec"
+      ]
+    },
+    "IISArt.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../IISArt.Abstractions/IISArt.Abstractions.csproj",
+      "msbuildProject": "../IISArt.Abstractions/IISArt.Abstractions.csproj"
+    },
+    "IISArt.Common/1.0.0": {
+      "type": "project",
+      "path": "../IISArt.Common/IISArt.Common.csproj",
+      "msbuildProject": "../IISArt.Common/IISArt.Common.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.6.1": [
+      "IISArt.Abstractions >= 1.0.0",
+      "IISArt.Common >= 1.0.0",
+      "Ninject >= 3.3.4"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\DNS\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
+    "restore": {
+      "projectUniqueName": "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\Dictionary\\IISArt.Server.csproj",
+      "projectName": "IISArt.Server",
+      "projectPath": "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\Dictionary\\IISArt.Server.csproj",
+      "packagesPath": "C:\\Users\\DNS\\.nuget\\packages\\",
+      "outputPath": "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\Dictionary\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\DNS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net461": {
+          "projectReferences": {
+            "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\IISArt.Abstractions\\IISArt.Abstractions.csproj": {
+              "projectPath": "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\IISArt.Abstractions\\IISArt.Abstractions.csproj"
+            },
+            "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\IISArt.Common\\IISArt.Common.csproj": {
+              "projectPath": "W:\\Projects\\t13ka\\IISArt_dictionary\\Dictionary\\IISArt.Common\\IISArt.Common.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net461": {
+        "dependencies": {
+          "Ninject": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          }
+        }
+      }
+    }
+  }
+}
